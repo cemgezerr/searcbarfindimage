@@ -1,14 +1,16 @@
-import axios from "axios";
+import axios from 'axios';
 
-const searchİmages = async () => {
-    const response = axios.get('https://api.unsplash.com/search/photos', {
-        headers:{
-            Authorization: 'Client-ID eeGiIk4r72AE3FzzCvNzZzuz8V9waIU9UjPt0v9AfZw'
-        },
-        params:{
-            query: 'cars'
-        }
-    });
-    return response;
-}
-export default searchİmages;
+const searchImages = async (term) => {
+  const response = await axios.get('https://api.unsplash.com/search/photos', {
+    headers: {
+      Authorization: 'Client-ID cNEPMYzn5YNRVwR_sIUnfSebAviRqNWvlxtyAvQRd3c',
+    },
+    params: {
+      query: term,
+    },
+  });
+
+  return response.data.results;
+};
+
+export default searchImages;
