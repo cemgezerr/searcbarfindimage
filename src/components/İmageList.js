@@ -1,4 +1,4 @@
 function İmagelist(){
-    return <div>App</div>
+    return <div>İmagelist</div>
 }
 export default İmagelist;
