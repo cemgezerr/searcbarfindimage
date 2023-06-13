@@ -1,4 +1,4 @@
-function İmageshow(){
-    return <div>App</div>
+function İmageshow({ image }){
+    return <div>{image.id}</div>
 }
 export default İmageshow;
