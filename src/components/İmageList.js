@@ -1,9 +1,10 @@
+import './İmageList.css'
 import İmageShow from './İmageShow'
 
 function İmagelist({ images }){
     const renderedİmage = images.map((image) => {
-        return <İmageShow image={image}/>
+        return <İmageShow key={image.id} image={image}/>
     })
-    return <div> {renderedİmage}</div>
+    return <div className="image-list"> {renderedİmage}</div>
 }
 export default İmagelist;
